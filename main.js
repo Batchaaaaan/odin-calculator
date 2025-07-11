@@ -1,18 +1,31 @@
-function add(a, b) {
-    return a + b;
+function add(firstNumber, secondNumber) {
+    return firstNumber + secondNumber;
 }
 
 
-function subtract(a, b) {
-    return a - b;
+function subtract(firstNumber, secondNumber) {
+    return firstNumber - secondNumber;
 }
 
 
-function multiply(a, b) {
-    return a * b;
+function multiply(firstNumber, secondNumber) {
+    return firstNumber * secondNumber;
 }
 
 
-function divide(a, b) {
-    return a // b;
+function divide(firstNumber, secondNumber) {
+    return firstNumber / secondNumber;
+}
+
+
+function operate(operator, firstOperand, secondOperand) {
+    if (operator === 'add') {
+        return add(firstOperand, secondOperand);
+    } else if (operator === 'subtract') {
+        return subtract(firstOperand, secondOperand);
+    } else if (operator === 'multiply') {
+        return multiply(firstOperand, secondOperand);
+    } else if (operator === 'divide') {
+        return divide(firstOperand, secondOperand);
+    }
 }
